@@ -94,8 +94,6 @@ SNS is allowed to send messages to the main SQS queue through a restricted queue
 
 ## Project Screenshots
 
-## Project Screenshots
-
 ### 1. SNS Topic
 ![SNS Topic](screenshots/01-sns-topic.png)
 
