@@ -94,7 +94,25 @@ SNS is allowed to send messages to the main SQS queue through a restricted queue
 
 ## Project Screenshots
 
-Screenshots demonstrating the architecture and testing results are available in the [`screenshots`](screenshots/) folder.
+## Project Screenshots
+
+### 1. SNS Topic
+![SNS Topic](screenshots/01-sns-topic.png)
+
+### 2. SQS Main Queue and DLQ Configuration
+![SQS Main Queue](screenshots/02-sqs-main-queue.png)
+
+### 3. Dead Letter Queue
+![Dead Letter Queue](screenshots/03-sqs-dead-letter-queue.png)
+
+### 4. Lambda Function
+![Lambda Function](screenshots/04-lambda-function.png)
+
+### 5. CloudWatch Logs
+![CloudWatch Logs](screenshots/05-cloudwatch-logs.png)
+
+### 6. DynamoDB Processing Results
+![DynamoDB Results](screenshots/06-dynamodb-results.png)
 
 ## Key Learning Outcomes
 
