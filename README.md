@@ -8,6 +8,22 @@ The architecture also implements an Amazon SQS Dead Letter Queue (DLQ) to captur
 
 ## Architecture
 
+```mermaid
+flowchart TD
+    A[Amazon SNS<br/>EventProcessingTopic]
+    B[Amazon SQS<br/>IncomingEventsQueue]
+    C[AWS Lambda<br/>EventProcessor]
+    D[Amazon DynamoDB<br/>EventProcessingResults]
+    E[Amazon SQS DLQ<br/>FailedEventsQueue]
+    F[Amazon CloudWatch<br/>Logs and Monitoring]
+
+    A --> B
+    B --> C
+    C --> D
+    B -.->|After 3 failed receives| E
+    C -.->|Execution logs| F
+```
+
 **Event Flow:**
 
 1. Amazon SNS publishes an event.
